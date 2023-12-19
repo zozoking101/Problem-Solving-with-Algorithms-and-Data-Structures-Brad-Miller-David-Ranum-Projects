@@ -1,4 +1,4 @@
-# Self check 3
+# Self-check 3
 
 import random
 
@@ -12,7 +12,7 @@ def random_28():
 
 
 def score_func(test):
-    goal = "methinks it is like a weasel"
+    goal = "methinks it is like a weasel" # len(goal) = 28
     score = 0
     i = 0
     for _ in test:
