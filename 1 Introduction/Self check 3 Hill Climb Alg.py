@@ -1,15 +1,11 @@
 # Self-check 3
 
 import random
-
-
-strset = 'abcdefghijklmnopqrstuvwxyz '
+import string
 
 def random_28():
-    return ''.join([random.choice(strset) for _ in range(28)])
-
-# print(random_27())
-
+    strset = string.ascii_lowercase + ' '
+    return ''.join(random.choice(strset) for _ in range(28))
 
 def score_func(test):
     goal = "methinks it is like a weasel" # len(goal) = 28
@@ -29,8 +25,6 @@ def tries_1000():
             high_string = rand_str
     print(f'Score: {score_func(rand_str)}, String: {high_string}')
 
-import string
-
 def hill_climb_alg(test):
     goal = "methinks it is like a weasel"
     strset = string.ascii_lowercase + ' '
@@ -46,9 +40,6 @@ def hill_climb_alg(test):
     
     return itr
 
-def random_28():
-    strset = string.ascii_lowercase + ' '
-    return ''.join(random.choice(strset) for _ in range(28))
 
 rand_string = random_28()
 print(hill_climb_alg(rand_string))
